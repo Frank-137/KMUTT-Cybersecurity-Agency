@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
             flag: "KMUTT{hidden_flag_in_facebook}"
         },
         "Digital Forensics": {
-            hint: "This file have a secret flag use the metadata2go, you will find flag.",
+            hint: "This file have a secret flag use the Metadata2Go, you will find the flag.",
             btnText: "Download File",
             btnLink: "695565046_10239879968718184_8794800284229160206_n (1).jpg",
             isDownload: true,
