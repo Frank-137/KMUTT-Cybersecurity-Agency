@@ -198,4 +198,23 @@ document.addEventListener('DOMContentLoaded', () => {
             flagInput.value = '';
         });
     });
+
+    // Hamburger menu functionality
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const navLinksContainer = document.getElementById('nav-links');
+
+    if (hamburgerBtn && navLinksContainer) {
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navLinksContainer.classList.toggle('active');
+        });
+
+        // Close hamburger menu when a nav link is clicked
+        navLinks.forEach(item => {
+            item.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navLinksContainer.classList.remove('active');
+            });
+        });
+    }
 });

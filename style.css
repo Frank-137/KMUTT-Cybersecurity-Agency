@@ -52,6 +52,30 @@ body {
     padding: 0 20px;
 }
 
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    padding: 4px;
+}
+
+.hamburger-line {
+    width: 22px;
+    height: 2px;
+    background-color: var(--text-primary);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
 .logo {
     font-weight: 600;
     font-size: 14px;
@@ -307,16 +331,93 @@ input[type="text"]:focus {
 
 /* Responsive */
 @media (max-width: 768px) {
+    .navbar {
+        height: auto;
+        padding: 12px 0;
+    }
+    
+    .nav-content {
+        flex-direction: column;
+        gap: 0;
+        padding: 0 16px;
+    }
+
+    .nav-header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-links {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        overflow: hidden;
+        max-height: 0;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        max-height: 250px;
+        opacity: 1;
+        margin-top: 12px;
+        padding-bottom: 8px;
+    }
+
+    .nav-link {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-link:last-child {
+        border-bottom: none;
+    }
+
+    /* Hamburger animation */
+    .hamburger.active .hamburger-line:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .hamburger-line:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+
+    .hero {
+        margin-bottom: 40px;
+    }
+
     .hero h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
     
     .hero p {
-        font-size: 18px;
+        font-size: 16px;
     }
     
     .challenge-card {
-        padding: 30px 20px;
+        padding: 24px 20px;
+    }
+    
+    .flag-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    .flag-container code {
+        font-size: 14px;
     }
     
     .input-group {
