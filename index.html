@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptography Training | KMUTT Cybersecurity Agency</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <span class="logo">KMUTT Cyber Agency</span>
+            <div class="nav-links">
+                <a href="#" class="nav-link active" data-system="Cryptography">Cryptography</a>
+                <a href="#" class="nav-link" data-system="OSINT">OSINT</a>
+                <a href="#" class="nav-link" data-system="Digital Forensics">Digital Forensics</a>
+                <a href="#" class="nav-link" data-system="Reverse Engineering">Reverse Engineering</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <header class="hero">
+            <h1>Cryptography Challenge</h1>
+            <p>Welcome to the KMUTT Cybersecurity Agency training platform. Your mission is to decode the encrypted flag
+                below.</p>
+        </header>
+
+        <section class="challenge-card">
+            <div class="card-section" id="target-section">
+                <h2 id="target-label">Encrypted Flag</h2>
+                <div class="flag-container">
+                    <code id="target-text">S01VVFR7Q1lCRVJ9</code>
+                    <button id="copy-btn" class="btn btn-secondary">Copy</button>
+                </div>
+            </div>
+
+            <div class="card-section">
+                <h2>Hint</h2>
+                <p id="hint-text" class="hint-text">This message was encoded using Base64. Use the 'From Base64'
+                    operation in
+                    CyberChef.</p>
+                <a id="action-btn" href="https://toolbox.itsec.tamu.edu/" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-primary">Open CyberChef</a>
+            </div>
+
+            <div class="card-section submit-section">
+                <h2>Submit Flag</h2>
+                <div class="input-group">
+                    <input type="text" id="flag-input" placeholder="Enter decoded flag (e.g., KMUTT{...})">
+                    <button id="submit-btn" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-overlay" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-icon" id="modal-icon"></div>
+            <h2 id="modal-title">Success!</h2>
+            <p id="modal-message">You have successfully decoded the flag.</p>
+            <button id="close-modal-btn" class="btn btn-primary">Continue</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
